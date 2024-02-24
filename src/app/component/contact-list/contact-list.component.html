@@ -1,0 +1,107 @@
+
+<div class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <h1 style="color: white; font-size: 24px;">contact Managment</h1>
+    <div>
+      <button class="btn btn-success" routerLink="/addcontact">Add Contact</button>&nbsp;
+      <button class="btn btn-warning" (click)="logout()" routerLink="/">Logout</button>
+    </div>
+  </div>
+
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col sm-5">
+      <div class="image">
+        <img
+          src="https://img.freepik.com/free-photo/close-up-businesswoman-signing-contract-office_637285-117.jpg?w=740&t=st=1706588914~exp=1706589514~hmac=ef1f072dca3c5c6892f83d187543ba97b449b45eb9105b4e28aaa14b18d0c314"
+          class="img-fluid">
+      </div>
+    </div>
+    <div class="col sm-7">
+      <div class="form-outline mt-3">
+        <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control" placeholder="search"
+          aria-label="search" />
+      </div>
+      <table class="table table-borderless mt-2">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">City</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data|filter:searchtext ">
+            <td>{{item.firstname}}</td>
+            <td>{{item.lastname}}</td>
+            <td>{{item.phonenumber}}</td>
+            <td>{{item.city}}</td>
+            <td><i style="color: blue;" routerLink="/updatecontact/{{item.id}}" class="fas fa-edit"></i>&nbsp;
+              <i style="color: red;" (click)="deleteitem(item.id)" class="fas fa-trash"></i>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<div class="footer">
+  <h5 style="font-size: 1re,;">@CopyRight 2024 Contact managment sytem crud
+    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Us</button>
+  </h5>
+</div>
+<!-- Button trigger modal -->
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:#039be5;">
+        <h5 class="modal-title" style="color: white" id="exampleModalLabel">Contact Us</h5>
+        <button type="button" class="btn-close" style="background-color:#039be5;" data-bs-dismiss="modal"
+          aria-label="Close">
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form [formGroup]="contactusForm">
+
+
+          <div class="form-group mt-2">
+            <label for="exampleInputEmail1">Enter Name</label>
+            <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group mt-2">
+            <label for="exampleInputEmail1">Enter Message</label>
+            <textarea type="textarea" formControlName="message" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="Enter ,message"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer" style="background-color:#039be5;">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="contactusSubmit(this.contactusForm.value)">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container">
+    <router-outlet></router-outlet>
+  </div> -->

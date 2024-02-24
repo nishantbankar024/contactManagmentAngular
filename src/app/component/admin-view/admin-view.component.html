@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container-fluid">
+        <h1 style="color:white; font-size: 24px;">Admin View Page</h1>
+    </div>
+    <button routerLink="/addmin-loginSignUp" (click)="logout()" class="btn btn-dark">Logout</button>&nbsp;
+    <button routerLink="/" class="btn btn-warning">Home</button>
+</nav>
+
+<div class="container" mt-4>
+    <h5 style="font-size: 35px;">User Query List</h5>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Sl No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Messgae</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.message}}</td>
+            <td><i  style="color: red;" (click)="deleted(item.id)" class="fas fa-trash"></i></td>
+          </tr>
+       
+        </tbody>
+      </table>
+
+</div>
+

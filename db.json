@@ -1,0 +1,96 @@
+{
+  "posts": [
+    {
+      "firstname": "ram",
+      "lastname": "ingole",
+      "phonenumber": "768322",
+      "city": "akola",
+      "id": "2"
+    },
+    {
+      "id": "d09f",
+      "firstname": "monali",
+      "lastname": "waghmare",
+      "phonenumber": 98733983,
+      "city": "nashik"
+    },
+    {
+      "firstname": "raju",
+      "lastname": "kale",
+      "phonenumber": 8769865,
+      "city": "kolkata",
+      "id": "A43dPpv"
+    },
+    {
+      "firstname": "mohan",
+      "lastname": "jadhav",
+      "phonenumber": 8687986898,
+      "city": "nashik",
+      "id": "aIH1k80"
+    },
+    {
+      "firstname": "ramesh",
+      "lastname": "yadav",
+      "phonenumber": 75896786,
+      "city": "mumbai",
+      "id": "0RihepK"
+    }
+  ],
+  "signup": [
+    {
+      "name": "nishan",
+      "email": "nish@gmail.com123",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "name": "ayush",
+      "email": "ayush9@gmail.com",
+      "password": "5678",
+      "id": 2
+    },
+    {
+      "name": "rahul",
+      "email": "rahul@gmail.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "name": "sumit",
+      "email": "sumit@gmail.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "name": "mohit",
+      "email": "mohit@gmail.com",
+      "password": "5678",
+      "id": 5
+    }
+  ],
+  "contact": [
+    {
+      "name": "rahul",
+      "email": "rahul@gmail.com",
+      "messgae": "",
+      "id": 2
+    },
+    {
+      "name": "narendra",
+      "email": "narendra@gmail.com",
+      "message": "not good web site",
+      "id": 3
+    }
+  ],
+  "adminsignup": [
+    {
+      "name": "",
+      "email": "nish@gmail.com",
+      "password": "1235",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
